@@ -1,8 +1,8 @@
 package com.example.harrypotterapp
 
-import org.junit.jupiter.api.Test
 
 import org.junit.Assert.*
+import org.junit.Test
 
 /**
  * Example local unit test, which will execute on the development machine (host).
