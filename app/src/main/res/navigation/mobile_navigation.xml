@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+
+        android:id="@+id/navigation_home"
+        android:name="com.example.harrypotterapp.ui.libros.LibroFragment"
+        android:label="@string/title_libro"
+        tools:layout="@layout/fragment_libros" />
+
+    <fragment
+
+        android:id="@+id/navigation_personajes"
+        android:name="com.example.harrypotterapp.ui.personajes.PersonajesFragment"
+        android:label="@string/title_personaje"
+        tools:layout="@layout/fragment_personajes" >
+        <action
+            android:id="@+id/action_navigation_personajes_to_personajeDetalleFragment"
+            app:destination="@id/personajeDetalleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personajeDetalleFragment"
+        android:name="com.example.harrypotterapp.ui.personajes.PersonajeDetalleFragment"
+        android:label="fragment_personaje_detalle"
+        tools:layout="@layout/fragment_personaje_detalle">
+
+        <argument
+
+            android:name="personaje"
+            app:argType="com.example.harrypotterapp.utils.Character" />
+        <action
+            android:id="@+id/action_personajeDetalleFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_personajeDetalleFragment_to_navigation_personajes"
+            app:destination="@id/navigation_personajes" />
+
+    </fragment>
+
+</navigation>

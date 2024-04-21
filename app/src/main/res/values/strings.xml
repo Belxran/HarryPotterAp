@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HarryPotterApp</string>
+    <string name="title_libro">Libros</string>
+    <string name="title_personaje">Personajes</string>
+</resources>
