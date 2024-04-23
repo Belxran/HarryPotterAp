@@ -27,7 +27,9 @@
         android:id="@+id/personajeDetalleFragment"
         android:name="com.example.harrypotterapp.ui.personajes.PersonajeDetalleFragment"
         android:label="fragment_personaje_detalle"
-        tools:layout="@layout/fragment_personaje_detalle">
+        tools:layout="@layout/fragment_personaje_detalle"
+
+        >
 
         <argument
 
