@@ -44,7 +44,6 @@ class PersonajesFragment : Fragment() {
             adapter.setCasas(casas)
         })
 
-
         val searchView = binding.searchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -60,9 +59,13 @@ class PersonajesFragment : Fragment() {
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+         viewModel.cargarPersonajes("en")
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
